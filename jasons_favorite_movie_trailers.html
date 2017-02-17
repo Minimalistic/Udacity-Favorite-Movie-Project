@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Jasons' Favorite Movie Trailers!</title>
+
+    <!-- Bootstrap 3 -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" charset="utf-8">
+        	// Pause the video when the modal is closed
+        $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (event) {
+            // Remove the src so the player itself gets removed, as this is the only
+            // reliable way to ensure the video stops playing in IE
+            $("#trailer-video-container").empty();
+        });
+       	    // Start playing the video whenever the trailer modal is opened
+        $(document).on('click', '.movie-tile', function (event) {
+            var trailerYouTubeId = $(this).attr('data-trailer-youtube-id')
+            var sourceUrl = 'http://www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
+            $("#trailer-video-container").empty().append($("<iframe></iframe>", {
+              'id': 'trailer-video',
+              'type': 'text-html',
+              'src': sourceUrl,
+              'frameborder': 0
+            }));
+        });
+        // Animate in the movies when the page loads
+        // (marked as slow to make the animation more visible)
+        $(document).ready(function () {
+          $('.movie-tile').hide().first().show("slow", function showNext() {
+            $(this).next("div").show("fast", showNext);
+          });
+        });
+    </script>
+</head>
+
+  <body>
+    <!-- Trailer Video Modal -->
+    <div class="modal" id="trailer">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <a href="#" class="hanging-close" data-dismiss="modal" aria-hidden="true">
+            <img src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&h=24"/>
+          </a>
+          <div class="scale-media" id="trailer-video-container">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Page Content -->
+    <div class="container">
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Jasons' Favorite Movie Trailers</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      
+<div class="col-md-6 col-lg-4 movie-tile text-center"
+		data-trailer-youtube-id="eogpIG53Cis"
+		data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/en/5/53/Blade_Runner_poster.jpg" width="220" height="342">
+    <h2>Blade Runner
+    <p></p>
+    <span>Do androids dream of electric sheep?</span>
+    </h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center"
+		data-trailer-youtube-id="bEVY_lonKf4"
+		data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Alien_movie_poster.jpg" width="220" height="342">
+    <h2>Alien
+    <p></p>
+    <span>In space no one can hear you scream.</span>
+    </h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center"
+		data-trailer-youtube-id="sY1S34973zA"
+		data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/en/1/1c/Godfather_ver1.jpg" width="220" height="342">
+    <h2>The Godfather
+    <p></p>
+    <span>The aging patriarch of an organized crime dynasty transfers control of his    clandestine empire to his reluctant son.</span>
+    </h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center"
+		data-trailer-youtube-id="9MqVeJeDfio"
+		data-toggle="modal" data-target="#trailer">
+    <img src="http://ia.media-imdb.com/images/M/MV5BMjQyMzI2OTA3OF5BMl5BanBnXkFtZTgwNDg5NjQ0OTE@._V1_SY1000_CR0,0,674,1000_AL_.jpg" width="220" height="342">
+    <h2>Rogue One
+    <p></p>
+    <span>Rebels out on a mission to steal the plans for the Death Star.</span>
+    </h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center"
+		data-trailer-youtube-id="0ZOcoxjeUYo"
+		data-toggle="modal" data-target="#trailer">
+    <img src="http://ia.media-imdb.com/images/M/MV5BMjA0ODEzMTc1Nl5BMl5BanBnXkFtZTcwODM2MjAxNA@@._V1_SY1000_CR0,0,664,1000_AL_.jpg" width="220" height="342">
+    <h2>Raiders of the Lost Ark
+    <p></p>
+    <span>Archaeologist and adventurer Indiana Jones is hired by the U.S. government    to find the Ark of the Covenant before the Nazis.</span>
+    </h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center"
+		data-trailer-youtube-id="Y1txEAywdiw"
+		data-toggle="modal" data-target="#trailer">
+    <img src="http://ia.media-imdb.com/images/M/MV5BY2QwYmFmZTEtNzY2Mi00ZWMyLWEwY2YtMGIyNGZjMWExOWEyXkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SY1000_CR0,0,671,1000_AL_.jpg" width="220" height="342">
+    <h2>Predator
+    <p></p>
+    <span>A team of commandos on a mission in a Central American jungle find     themselves hunted by an extraterrestrial warrior.</span>
+    </h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center"
+		data-trailer-youtube-id="atLg2wQQxvU"
+		data-toggle="modal" data-target="#trailer">
+    <img src="http://upload.wikimedia.org/wikipedia/en/9/9f/Midnight_in_Paris_Poster.jpg" width="220" height="342">
+    <h2>Midnight in Paris
+    <p></p>
+    <span>Going back in time to meet authors</span>
+    </h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center"
+		data-trailer-youtube-id="zIbx7jU35X0"
+		data-toggle="modal" data-target="#trailer">
+    <img src="http://ia.media-imdb.com/images/M/MV5BMTkzODczMTgwM15BMl5BanBnXkFtZTYwNTAwODI5._V1_.jpg" width="220" height="342">
+    <h2>Monty Python and the Holy Grail
+    <p></p>
+    <span>King Arthur and his knights embark on a low-budget search for the Grail,     encountering many, very silly obstacles.</span>
+    </h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center"
+		data-trailer-youtube-id="PbA63a7H0bo"
+		data-toggle="modal" data-target="#trailer">
+    <img src="https://upload.wikimedia.org/wikipedia/en/6/64/Dumbanddumber.jpg" width="220" height="342">
+    <h2>Dumb and Dumber
+    <p></p>
+    <span>The cross-country adventures of two good-hearted but incredibly stupid     friends.</span>
+    </h2>
+</div>
+
+    </div>
+  </body>
+</html>

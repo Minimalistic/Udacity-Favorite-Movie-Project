@@ -1,0 +1,92 @@
+    <style type="text/css" media="screen">
+
+    	span {
+    	padding-top:
+    	font-size:100%:
+    	}
+		h2 span {
+		/*Styling the font for the subtitles*/
+		font-style: italic;
+		font-size:60%;
+		font-family: serif;
+		}
+        body {
+            padding-top: 80px;
+            background-color:gray;
+            /*Just a basic background image for the movie page*/
+            background-image:url("trx.jpg");
+            color:black;
+
+        }
+        #trailer .modal-dialog {
+            margin-top: 200px;
+            width: 640px;
+            height: 360px;
+
+        }
+        .hanging-close {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            z-index: 9001;
+
+        }
+        #trailer-video {
+            width: 100%;
+            height: 100%;
+
+        }
+        .movie-tile {
+            margin-bottom: 20px;
+            padding-top: 20px;
+
+        }
+        .movie-tile img{
+            border-radius: 10px 10px 10px 10px;
+			-moz-border-radius: 10px 10px 10px 10px;
+			-webkit-border-radius: 10px 10px 10px 10px;
+			border: 0px solid #000000;
+
+			-webkit-box-shadow: 0px 10px 16px -7px rgba(0,0,0,0.85);
+			-moz-box-shadow: 0px 10px 16px -7px rgba(0,0,0,0.85);
+			box-shadow: 0px 10px 16px -7px rgba(0,0,0,0.85);
+
+        }
+        .movie-tile:hover {
+            cursor: pointer;
+
+        }
+        .movie-tile img{ /*Preparing the shadowing for each movie poster
+        				   image as well as setting the animation speed*/
+        transition: all .3s ease-in-out;
+        filter: brightness(70%); /*Slightly dimming each movie poster
+        					       so it can be brightened on hover */
+
+        }
+        .movie-tile:hover img{
+        /*changing the shadowing as well as making it white so it appears to glow */
+		-webkit-box-shadow: 0px 0px 14px 2px rgba(255,255,255,1);
+		-moz-box-shadow: 0px 0px 14px 2px rgba(255,255,255,1);
+		box-shadow: 0px 0px 14px 2px rgba(255,255,255,1);
+		transform: scale(1.05); /*This scales the movie image slightly
+							      upon hover for depth */
+
+		filter: brightness(100%); /*brings movie poster image back to
+								    100% brightness to aid effect */
+
+		}
+        .scale-media {
+            padding-bottom: 56.25%;
+            position: relative;
+        }
+        .scale-media iframe {
+            border: none;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background-color: black;
+
+        }
+    </style>

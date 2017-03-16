@@ -1,6 +1,6 @@
 ![Udacity Logo](/img/Udacity_200.png)
 
-#Jason's Favorite Movie Trailers!
+# Jason's Favorite Movie Trailers!
 
 ## Contents
 

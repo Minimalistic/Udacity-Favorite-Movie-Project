@@ -1,3 +1,5 @@
+![Udacity Logo](/img/Udacity_200.png)
+
 #Jasons' Favorite Movie Trailers!
 
 ## Contents

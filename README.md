@@ -1,6 +1,6 @@
-![App Preview](/img/app.jpg)
-
 # Jason's Favorite Movie Trailers!
+
+![App Preview](/img/app.jpg)
 
 ## Contents
 
@@ -24,7 +24,7 @@ and follow the appropriate instructions for your machine.
 To use Jason's Favorite Movie Trailers!, open a terminal and navigate to the folder
 that contains Jason's Favorite Movie Trailers!.  Once in the appropriate folder, type:
 
-`python entertainment_center.py`
+`python jasons-fav-trailer-website.py`
 
 and press enter. Once the website loads
 and the movies posters are displayed, you can hover the cursor over a movie of your

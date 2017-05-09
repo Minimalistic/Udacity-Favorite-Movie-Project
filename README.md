@@ -1,4 +1,4 @@
-![Udacity Logo](/img/Udacity_200.png)
+![App Preview](/img/app.jpg)
 
 # Jason's Favorite Movie Trailers!
 
